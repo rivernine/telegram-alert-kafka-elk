@@ -1,0 +1,10 @@
+version: '3'
+services:
+  kafka-consumer-1:
+    build: ./KafkaConsumer
+    environment:
+      - ALPHABET_RANGE=a-m
+  kafka-consumer-2:
+    build: ./KafkaConsumer
+    environment:
+      - ALPHABET_RANGE=n-z
