@@ -1,14 +1,19 @@
 # Kafka
 
 # Prerequisites
-||name|version|
-|:-:|:-:|:-:|
-|infra|docker|24.0.6|
-|infra|docker-compose|1.29.2|
-|lang|python|3.8|
-|lib|kafka broker|docker.io/bitnami/kafka:3.6|
-|lib|kafka client|confluent kafka|
-|tool|broker |confluent kafka|
+||name|version||
+|:-:|:-:|:-:|:-:|
+|infra|docker|24.0.6||
+|infra|docker-compose|1.29.2||
+|lang|python|3.8||
+|lib|kafka broker|docker.io/bitnami/kafka:3.6|docker image|
+|lib|kafka client|confluent kafka|python library|
+|lib|elk|-|https://github.com/deviantony/docker-elk|
+
+# Docker network
+```sh
+$ docker network create kafka-network
+```
 
 # Broker
 

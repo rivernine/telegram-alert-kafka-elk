@@ -17,7 +17,8 @@ def print_message(message):
 #             print(f"Processing token: {token}")
 if __name__ == "__main__":
     consumer_config = KafkaConsumerConfig(
-        bootstrap_servers= "localhost:9094",
+        # bootstrap_servers= "localhost:9092", # internal
+        bootstrap_servers= "localhost:9094", # external
         group_id= "mygroup",
         auto_offset_reset= "earliest",
         topic= "mytopic"

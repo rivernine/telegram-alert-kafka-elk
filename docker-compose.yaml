@@ -1,10 +1,20 @@
 version: '3'
+
 services:
-  kafka-consumer-1:
-    build: ./KafkaConsumer
+  telegram-consumer:
+    container_name: telegram-consumer
+    image: telegram-consumer
     environment:
       - ALPHABET_RANGE=a-m
-  kafka-consumer-2:
-    build: ./KafkaConsumer
-    environment:
-      - ALPHABET_RANGE=n-z
+    networks:
+      - kafka-network
+      
+  telegram-producer:
+    container_name: telegram-producer
+    image: telegram-producer
+    networks:
+      - kafka-network
+
+networks:
+  kafka-network:
+    external: true
